@@ -1,0 +1,7 @@
+RewriteEngine On
+
+RewriteRule ^events?$ events.html
+
+RewriteRule ^events/?$ events.html
+
+RewriteRule ^events/([0-9]+) e.php?id=$1

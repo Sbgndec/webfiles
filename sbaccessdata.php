@@ -33,10 +33,16 @@ if(isset($_POST['jma'])){
     }
     $name=mysqli_real_escape_string($conn,$_POST['nameallowed']);
     $passw=mysqli_real_escape_string($conn,$_POST['pass']);
-    //$q=$_POST['makechangesoftable'];
-    //echo $q;
-    if($name=="Sbowl1001"&&$passw=="dataofatharva18"){
-    
+    $asql="SELECT * FROM admin WHERE `name`= '$name' AND `passw` = PASSWORD('$passw');";
+   //echo $asql;
+    $check = mysqli_query($conn,$asql);
+    if(mysqli_num_rows($check) <1)
+      {
+        echo "hello if";
+      }
+        
+    else{
+    //echo "sdn";
     $table=mysqli_real_escape_string($conn,$_POST['tab']);
      $esql="SELECT * FROM $table WHERE 1;";
     $tasks = mysqli_query($conn,$esql);
@@ -142,6 +148,7 @@ if($table=="events"){
  echo '</div>
 </div>';
 }
+
 }
 ?>
 

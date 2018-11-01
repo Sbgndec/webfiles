@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 31, 2018 at 09:03 PM
+-- Generation Time: Nov 01, 2018 at 12:32 PM
 -- Server version: 10.1.31-MariaDB
 -- PHP Version: 7.2.3
 
@@ -21,6 +21,25 @@ SET time_zone = "+00:00";
 --
 -- Database: `atharva`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admin`
+--
+
+CREATE TABLE `admin` (
+  `ad_id` int(10) NOT NULL,
+  `name` varchar(20) NOT NULL,
+  `passw` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`ad_id`, `name`, `passw`) VALUES
+(1, 'Sbowl1001', '*660E164697EFF2E567F4FE4B805C0EFCD8C3BE59');
 
 -- --------------------------------------------------------
 
@@ -124,8 +143,21 @@ CREATE TABLE `register` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
+-- Dumping data for table `register`
+--
+
+INSERT INTO `register` (`re_id`, `name`, `email`, `phone`, `address`, `institute`, `ath_id`) VALUES
+(1, 'Shubham', 'shubhambaranwal83@gmail.com', '9914427051', 'zxcvbnm,', 'Guru Nanak Dev Engineering College', '2S1M3');
+
+--
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `admin`
+--
+ALTER TABLE `admin`
+  ADD PRIMARY KEY (`ad_id`);
 
 --
 -- Indexes for table `contact`
@@ -156,6 +188,12 @@ ALTER TABLE `register`
 --
 
 --
+-- AUTO_INCREMENT for table `admin`
+--
+ALTER TABLE `admin`
+  MODIFY `ad_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `contact`
 --
 ALTER TABLE `contact`
@@ -177,7 +215,7 @@ ALTER TABLE `participant`
 -- AUTO_INCREMENT for table `register`
 --
 ALTER TABLE `register`
-  MODIFY `re_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `re_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

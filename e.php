@@ -80,7 +80,7 @@
                 <div class="col-12 buttons-wrap">
                     <div class="entry-header">
                         <h2 class="entry-title"><?php
-                                 include 'db.in.php';
+                                 include 'config.php';
                                 $id=mysqli_real_escape_string($conn,$_GET['id']);
                                 if($id>=1&&$id<=20)
                                  {

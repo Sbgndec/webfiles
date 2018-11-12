@@ -1,5 +1,5 @@
 <?php
-                                     include 'db.in.php';
+                                     include 'config.php';
                                         $reid=mysqli_real_escape_string($conn,$_POST['reid']);
                                         $evid=mysqli_real_escape_string($conn,$_POST['evid']);
                                         if(!empty($reid)&&!empty($evid)){

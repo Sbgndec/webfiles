@@ -23,7 +23,7 @@
 <body>
 <?php
 if(isset($_POST['jma'])){
-     include 'db.in.php';
+     include 'config.php';
     $name=mysqli_real_escape_string($conn,$_POST['nameallowed']);
     $passw=mysqli_real_escape_string($conn,$_POST['pass']);
     $asql="SELECT * FROM admin WHERE `name`= '$name' AND `passw` = PASSWORD('$passw');";

@@ -1,6 +1,6 @@
 <?php
 if(isset($_POST['submit'])){
-     include 'db.in.php';
+     include 'config.php';
 
     $name=mysqli_real_escape_string($conn,$_POST['name']);
     $email=mysqli_real_escape_string($conn,$_POST['email']);

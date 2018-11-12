@@ -80,14 +80,7 @@
                 <div class="col-12 buttons-wrap">
                     <div class="entry-header">
                         <h2 class="entry-title"><?php
-                                $dbserver="localhost";
-                                $dbuser="atharva";
-                                $dbpwd="atharva";
-                                $dbname="atharva";
-                                $conn=mysqli_connect($dbserver,$dbuser,$dbpwd,$dbname);
-                                if (!$conn) {
-                                    die("Connection failed: " . mysqli_connect_error());
-                                }
+                                 include 'db.in.php';
                                 $id=mysqli_real_escape_string($conn,$_GET['id']);
                                 if($id>=1&&$id<=20)
                                  {

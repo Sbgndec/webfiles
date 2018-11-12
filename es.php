@@ -1,13 +1,5 @@
 <?php
-                                    if(isset($_POST['submit'])){
-                                         $dbserver="localhost";
-                                        $dbuser="atharva";
-                                        $dbpwd="atharva";
-                                        $dbname="atharva";
-                                        $conn=mysqli_connect($dbserver,$dbuser,$dbpwd,$dbname);
-                                        if (!$conn) {
-                                            die("Connection failed: " . mysqli_connect_error());
-                                        }
+                                     include 'db.in.php';
                                         $reid=mysqli_real_escape_string($conn,$_POST['reid']);
                                         $evid=mysqli_real_escape_string($conn,$_POST['evid']);
                                         if(!empty($reid)&&!empty($evid)){

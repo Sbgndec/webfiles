@@ -23,14 +23,7 @@
 <body>
 <?php
 if(isset($_POST['jma'])){
-    $dbserver="localhost";
-    $dbuser="atharva";
-    $dbpwd="atharva";
-    $dbname="atharva";
-    $conn=mysqli_connect($dbserver,$dbuser,$dbpwd,$dbname);
-    if (!$conn) {
-        die("Connection failed: " . mysqli_connect_error());
-    }
+     include 'db.in.php';
     $name=mysqli_real_escape_string($conn,$_POST['nameallowed']);
     $passw=mysqli_real_escape_string($conn,$_POST['pass']);
     $asql="SELECT * FROM admin WHERE `name`= '$name' AND `passw` = PASSWORD('$passw');";

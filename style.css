@@ -320,7 +320,7 @@ body {
 }
 
 .hero-content .entry-footer a:hover, .hero-content .entry-footer .current {
-    background: -webkit-linear-gradient(#36939c, #562446);
+    background: -webkit-linear-gradient(#1a5f3f, #98e338);
     color: hsl(0, 0%, 0%);
 }
 

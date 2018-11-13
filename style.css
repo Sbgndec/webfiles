@@ -452,7 +452,6 @@ body {
 
     .lineup-artists .lineup-artists-wrap:nth-of-type(even) .lineup-artists-description-container {
         right: -75px;
-        left: auto;
     }
 
     .lineup-artists .lineup-artists-wrap:nth-of-type(even) .box-link {

@@ -9,7 +9,7 @@
                                             if(mysqli_num_rows($result) <1){
                                                 echo "already present";
                                                // echo "LOCATION: /atharva/events/$evid";
-                                                header("LOCATION: /atharva/events/$evid");
+                                                header("LOCATION: /atharva/e.php?id=$evid");
                                                 exit();
                                             }
                                             else{
@@ -24,7 +24,7 @@
                                                 }
                                             }   
                                            }
-                                        } 
+                                        
                                     
                                     header('LOCATION: /atharva/events');
                                     ?>
